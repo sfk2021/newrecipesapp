@@ -6,7 +6,7 @@
     },
     {
         "src": "build_files.sh",
-        "use": "@vercel/recipeapp/build/static",
+        "use": "@vercel/recipeapp",
         "config": { "distDir": "recipeapp/build" }
     }
    ],
