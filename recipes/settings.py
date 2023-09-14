@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-qb93fu_s_9bgr8voa2uf@1*76t8l&of3rhiez(1y6pjrvy5c(m
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -55,7 +55,7 @@ ROOT_URLCONF = 'recipes.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,'recipeapp')],
+        'DIRS': [os.path.join(BASE_DIR,'recipeapp/build')],
           
         'APP_DIRS': True,
         'OPTIONS': {
@@ -117,17 +117,17 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-# STATIC_URL = 'static/'
-# STATICFILES_DIRS = [
-#       os.path.join(BASE_DIR,'recipeapp/build/static'),
-
-# ]
 STATIC_URL = 'static/'
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
-STATIC_ROOT = os.path.join(BASE_DIR, 'recipeapp/build/', 'static')
+STATICFILES_DIRS = [
+      os.path.join(BASE_DIR,'recipeapp/build/static'),
 
-MEDIA_URLS ='static/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'recipeapp/build/static/media')
+]
+# STATIC_URL = 'static/'
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'recipeapp/build/', 'static')
+
+# MEDIA_URLS ='static/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'recipeapp/build/static/media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
