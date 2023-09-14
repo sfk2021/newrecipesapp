@@ -55,7 +55,7 @@ ROOT_URLCONF = 'recipes.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,'recipeapp/build/')],
+        'DIRS': [os.path.join(BASE_DIR,'recipeapp')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

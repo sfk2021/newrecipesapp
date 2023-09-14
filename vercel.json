@@ -7,7 +7,7 @@
     {
         "src": "build_files.sh",
         "use": "@vercel/recipeapp",
-        "config": { "distDir": "recipeapp/build" }
+        "config": { "distDir": "recipeapp" }
     }
    ],
     "routes": [
