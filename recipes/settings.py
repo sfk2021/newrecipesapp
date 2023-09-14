@@ -55,7 +55,8 @@ ROOT_URLCONF = 'recipes.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,'recipeapp')],
+        # 'DIRS': [os.path.join(BASE_DIR,'recipeapp')],
+          'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -121,7 +122,9 @@ USE_TZ = True
 #       os.path.join(BASE_DIR,'recipeapp/build/static'),
 
 # ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'recipeapp/build/', 'static')
+STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'recipeapp/build/', 'static')
 MEDIA_URLS ='static/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'recipeapp/build/static/media')
 
