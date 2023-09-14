@@ -6,8 +6,8 @@
     },
     {
         "src": "build_files.sh",
-        "use": "@vercel/recipeapp/build",
-        "config": { "distDir": "recipeapp/build" }
+        "use": "@vercel/static",
+        "config": { "distDir": "static" }
     }
    ],
     "routes": [
